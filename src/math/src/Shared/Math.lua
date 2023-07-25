@@ -157,4 +157,39 @@ function Math.prime(num: number): boolean
 	return true
 end		
 
+--[=[
+	Returns the factorial of a number.
+
+	```lua
+	print(Math.factorial(5)) --> 120
+	```
+
+	@param num number
+	@return number
+]=]
+function Math.factorial(num: number): number
+	if num < 0 then error("Negative number") end
+	if num == 0 then return 1 end
+	local fact = 1
+	for i = 2, num do fact = fact * i end
+	return fact
+end
+
+--[=[
+	Returns the nth number in the Fibonacci sequence.
+
+	```lua
+	print(Math.fibonacci(7)) --> 13
+	```
+
+	@param n number
+	@return number
+]=]
+function Math.fibonacci(n: number): number
+	if n <= 0 then error("Input must be positive") end
+	local a, b = 0, 1
+	for i = 1, n do a, b = b, a+b end
+	return a
+end
+			
 return Math
