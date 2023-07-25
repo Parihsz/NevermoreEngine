@@ -138,4 +138,12 @@ function Math.roundDown(number: number, precision: number): number
 	return math.floor(number/precision) * precision
 end
 
+function Math.prime(num: number): boolean
+	if num < 2 then return false end
+	for i = 2, math.sqrt(num) do
+		if num % i == 0 then return false end
+	end
+	return true
+end		
+
 return Math
