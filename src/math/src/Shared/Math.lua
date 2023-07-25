@@ -137,7 +137,19 @@ end
 function Math.roundDown(number: number, precision: number): number
 	return math.floor(number/precision) * precision
 end
+			
+--[=[
+	Checks if a number is prime.
 
+	```lua
+	print(Math.prime(7)) --> true
+	print(Math.prime(6)) --> false
+	```
+
+	@param num number
+	@return boolean
+]=]
+			
 function Math.prime(num: number): boolean
 	if num < 2 then return false end
 	for i = 2, math.sqrt(num) do
