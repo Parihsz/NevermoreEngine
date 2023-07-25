@@ -148,8 +148,7 @@ end
 
 	@param num number
 	@return boolean
-]=]
-			
+]=]			
 function Math.prime(num: number): boolean
 	if num < 2 then return false end
 	for i = 2, math.sqrt(num) do
